@@ -10,7 +10,7 @@
 	
 	<h1>Nova Entrada</h1>
 
-	<form method="POST" action="nova-entrada">
+	<form method="POST" action="entrada-novo">
 		<label>ID:</label>
 		<input name="idEntrada" type="text"></br>
 		<label>Nome:</label>

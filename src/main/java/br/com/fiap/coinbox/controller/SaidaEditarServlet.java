@@ -3,6 +3,7 @@ package br.com.fiap.coinbox.controller;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.fiap.coinbox.dao.SaidaDAO;
 import br.com.fiap.coinbox.model.Saida;
 
+@WebServlet("/saida-editar")
 public class SaidaEditarServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -23,7 +25,7 @@ public class SaidaEditarServlet extends HttpServlet {
 
 		request.setAttribute("saida", saida);
 
-		request.getRequestDispatcher("/saida/editar.jsp").forward(request, response);
+		request.getRequestDispatcher("/coinbox/saida-editar.jsp").forward(request, response);
 	}
 
 	@Override
@@ -39,7 +41,7 @@ public class SaidaEditarServlet extends HttpServlet {
 
 		SaidaDAO.editar(saida);
 
-		response.sendRedirect(request.getContextPath() + "/animal-listar");
+		response.sendRedirect(request.getContextPath() + "/saida-listar");
 	}
 	
 }

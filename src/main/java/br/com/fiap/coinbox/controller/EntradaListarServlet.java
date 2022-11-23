@@ -27,7 +27,7 @@ public class EntradaListarServlet extends HttpServlet {
 
 		request.setAttribute("Entradas", listaEntradas);
 
-		request.getRequestDispatcher("/entrada/index.jsp").forward(request, response);
+		request.getRequestDispatcher("/coinbox/index.jsp").forward(request, response);
 	}
 
 }

@@ -11,7 +11,7 @@
 </head>
 <body>
 	
-	<a href="nova-entrada">+ Entrada</a>
+	<a href="entrada-novo.jsp">+ Entrada</a>
 	<a href="nova-saida">+ Saída</a>
 	
 	<table>

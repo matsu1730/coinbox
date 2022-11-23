@@ -25,7 +25,7 @@ public class EntradaEditarServlet extends HttpServlet {
 
 		request.setAttribute("entrada", entrada);
 
-		request.getRequestDispatcher("/entrada/editar.jsp").forward(request, response);
+		request.getRequestDispatcher("/coinbox/entrada-editar.jsp").forward(request, response);
 	}
 
 	@Override

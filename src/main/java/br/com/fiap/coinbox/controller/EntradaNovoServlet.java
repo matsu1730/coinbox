@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.fiap.coinbox.dao.EntradaDAO;
 import br.com.fiap.coinbox.model.Entrada;
 
-@WebServlet("/nova-entrada")
+@WebServlet("entrada-novo")
 public class EntradaNovoServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("coinbox/nova-entrada.jsp").forward(request, response);
+		request.getRequestDispatcher("coinbox/entrada-novo.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -37,6 +37,8 @@ public class EntradaNovoServlet extends HttpServlet {
 		List<Entrada> listaEntradas = EntradaDAO.listar();
 
 		request.setAttribute("entradas", listaEntradas);
+		
+		//request.getRequestDispatcher("coinbox/index.jsp").forward(request, response);
 
 		response.sendRedirect(request.getContextPath() + "/entrada-listar");
 	}
