@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.fiap.coinbox.dao.EntradaDAO;
 import br.com.fiap.coinbox.model.Entrada;
 
-@WebServlet("entrada-novo")
+@WebServlet("/entrada-novo")
 public class EntradaNovoServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
